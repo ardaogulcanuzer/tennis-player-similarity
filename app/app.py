@@ -130,7 +130,6 @@ def top_similar(player_name: str, season_val: int, surface_val: str, top_n_val: 
     out = out[out["player"] != player_name].head(top_n_val).reset_index(drop=True)
     return out
 
-# ✅ IMPORTANT: compute topN BEFORE using it
 topN = top_similar(player, int(season), surface, top_n)
 
 # ----------------------------
